@@ -1,5 +1,1 @@
-<div>
-  {{comment.id}}.) {{comment.name}}--{{comment.email}}
-  <br>
-  {{comment.body}}
-</div>
+<a routerLink="{{comment.id}}" [state]="comment"><br>{{comment.id}}.) {{comment.name}}</a>

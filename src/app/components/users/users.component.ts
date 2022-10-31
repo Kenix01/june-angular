@@ -12,6 +12,7 @@ import {UserService} from "../../services";
 })
 export class UsersComponent implements OnInit {
   users:UserInterface[];
+  selectedUser:UserInterface;
 
   constructor(private userService:UserService) { }
 
@@ -20,4 +21,7 @@ export class UsersComponent implements OnInit {
     this.userService.getAll().subscribe(value => this.users = value)
   }
 
+  getUser(user: UserInterface) {
+  this.selectedUser = user
+  }
 }

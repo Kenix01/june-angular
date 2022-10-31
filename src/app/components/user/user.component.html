@@ -1,1 +1,4 @@
-<div>{{user.id}}.) {{user.name}} -- {{user.email}}</div>
+<div>
+  <a routerLink="{{user.id}}" [state]="user">{{user.id}}.) {{user.name}} -- {{user.email}}</a>
+<!--  <button (click)="lift()">lift</button>-->
+</div>

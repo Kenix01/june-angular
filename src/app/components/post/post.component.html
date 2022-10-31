@@ -1,5 +1,1 @@
-<div>
-  {{post.id}}.) {{post.title}}
-  <br>
-  {{post.body}}
-</div>
+<a routerLink="{{post.id}}" [state]="post"><br>{{post.id}}.) {{post.title}}</a>

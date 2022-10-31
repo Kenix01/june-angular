@@ -17,4 +17,8 @@ export class PostService {
   getAll():Observable<PostInterface[]>{
     return this.httpClient.get<PostInterface[]>(urls.posts)
   }
+
+  getById(id: number):Observable<PostInterface>{
+    return this.httpClient.get<PostInterface>(`${urls.posts}/${id}`)
+  }
 }

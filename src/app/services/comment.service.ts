@@ -15,4 +15,8 @@ export class CommentService {
   getAll():Observable<CommentInterface[]> {
     return this.httpClient.get<CommentInterface[]>(urls.comments)
   }
+
+  getById(id: number):Observable<CommentInterface>{
+    return this.httpClient.get<CommentInterface>(`${urls.comments}/${id}`)
+  }
 }
